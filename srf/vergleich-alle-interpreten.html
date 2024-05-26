@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vergleich alle Interpreten – Kapsalon</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <header>
+        <a href="index.html"><button class="button-header">Das Projekt</button></a>
+        <a href="top-interpreten.html"><button class="button-header">Top Interpreten</button></a>
+        <button class="button-header button-aktiv">Vergleich Alle</button>
+        <a href="vergleich-gemeinsame-interpreten.html"><button class="button-header">Vergleich Gemeinsame</button></a>
+    </header>
+    <main>
+    <section>
+        <h1>Vergleich Interpreten</h1>
+        <h2>Vergleich meistgespielter Songs Radio SRF 3 und Radio Basilisk</h2>
+    </section>
+    <div class="containerFilter">
+         <div>
+            <p class="dauerTitel">Zeitspanne</p>
+            <button class="filter">30 Tage</button>
+        </div>
+            <div class="filterRadioSender">
+                <p>Basierend auf</p>
+                <div class="filterButtons">
+            <button id="channel1Btn" class="active basierend" onclick="fetchAndDisplayTopArtists(1); toggleActive('channel1Btn')">Radio SRF 3</button>
+<button class="basierend" id="channel2Btn" onclick="fetchAndDisplayTopArtists(2); toggleActive('channel2Btn')">Radio Basilisk</button>
+</div>
+</div>
+</div>
+    <div class="chart-container">
+        <canvas id="barChart"></canvas>
+    </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/vergleich-interpreten.js"></script> 
+</body>
+</html>
